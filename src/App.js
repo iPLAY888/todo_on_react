@@ -48,7 +48,7 @@ export default function ToDoList() {
       isDone: !allCompleted,
     }));
     setTodos(newTodos);
-    setCompletedAll(!allCompleted); // Переключаем состояние чекбокса "Complete all"
+    setCompletedAll(!allCompleted); 
   };
 
   const countCompleted = todos.filter((todo) => todo.isDone).length;
@@ -67,8 +67,8 @@ export default function ToDoList() {
       <div className="filter-btns">
         <Button onClick={sort}>Sort by completed</Button>
         <Button
-          checked={completedAll} // Состояние чекбокса "Complete all"
-          onClick={completeAll} // Используем onChange для обработки клика
+          checked={completedAll} 
+          onClick={completeAll} 
         >
           Complete all
         </Button>
@@ -79,7 +79,7 @@ export default function ToDoList() {
           todo={todo}
           onToggle={() => toggleTodo(todo.id)}
           onDelete={() => deleteTodo(todo.id)}
-          onEdit={(newText) => editTodo(todo.id, newText)} // Передаем функцию редактирования
+          onEdit={(newText) => editTodo(todo.id, newText)}
         />
       ))}
       <div className="footer">
