@@ -12,7 +12,7 @@ export default function ToDoList() {
   const [completedAll, setCompletedAll] = useState(false);
 
   const sort = () => {
-    sortTodo = [...todos].sort((a, b) => b.isDone - a.isDone);
+    const sortTodo = [...todos].sort((a, b) => b.isDone - a.isDone);
     setTodos(sortTodo);
   };
 
